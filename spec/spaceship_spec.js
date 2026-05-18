@@ -10,10 +10,16 @@ describe('Spaceship', function() {
 			['.','.','.','.','.','.','.','.','.','.'],
 			['.','.','.','.','.','.','.','.','.','.'],
 		];
-
 		mapEmpty = [];
-
 		mapInvalidType = "asfd";
+		mapWithX = [
+			['.','.','.','.','.','.','.','.','.','.'],
+			['.','.','.','.','.','.','.','.','.','.'],
+			['.','.','.','.','.','.','.','.','.','.'],
+			['.','.','.','.','.','.','.','X','.','.'],
+			['.','.','.','.','.','.','.','.','.','.'],
+			['.','.','.','.','.','.','.','.','.','.'],
+		];
 	});
 
 	it('should return "Spaceship lost forever." on a map without X ', function() {
@@ -26,5 +32,9 @@ describe('Spaceship', function() {
 
 	it('should return "Spaceship lost forever." on a non-array type map', function() {
 		expect(spaceship.find(mapInvalidType)).toEqual("Spaceship lost forever.");
+	});
+
+	it('should return [7, 2] coordinates of spaceship on a map with X(x = 7, y = 2)', function() {
+		expect(spaceship.find(mapWithX)).toEqual([7, 2]);
 	});
 });
