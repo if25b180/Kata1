@@ -1,0 +1,4 @@
+map without X -> "Spaceship lost forever."
+empty map -> "Spaceship lost forever."
+non-array map -> "Spaceship lost forever."
+map with X -> Return array with X and Y Coordinate of spaceship
